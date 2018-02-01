@@ -35,24 +35,6 @@
       });
     }
   </script>
-  <script>
-    window.addEventListener('beforeinstallprompt', function(e) {
-      // beforeinstallprompt Event fired
-
-      // e.userChoice will return a Promise.
-      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
-      e.userChoice.then(function(choiceResult) {
-
-        console.log(choiceResult.outcome);
-
-        if (choiceResult.outcome == 'dismissed') {
-          console.log('User cancelled home screen install');
-        } else {
-          console.log('User added to home screen');
-        }
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -61,6 +43,25 @@
   <img src="./t_48.png" alt="48x img">
   <img src="./t_96.png" alt="96x img">
   <img src="./t_192.png" alt="192x img">
+  <br />
+  <div id="doc"></div>
+  <script>
+    window.addEventListener('beforeinstallprompt', function(e) {
+      // 在安装提示之前
+      // dismissed
+      // accepted 添加到主屏幕
+      e.userChoice.then(function(choiceResult) {
+        console.log(`cool back`);
+        console.log(choiceResult.outcome);
+
+        if (choiceResult.outcome == 'dismissed') {
+          document.querySelector('doc').innerHTML = '取消安装';
+        } else if(choiceResult.outcome == 'accepted'){
+        document.querySelector('doc').innerHTML = '添加到主屏幕';
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
