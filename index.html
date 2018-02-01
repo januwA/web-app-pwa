@@ -29,5 +29,14 @@
    <img src="./t_48.png" alt="48x img">
    <img src="./t_96.png" alt="96x img">
    <img src="./t_192.png" alt="192x img">
+   <script>
+     if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(function(reg) {
+          console.log('Successfully registered service worker', reg);
+      }).catch(function(err) {
+          console.warn('Error whilst registering service worker', err);
+      });
+      }
+   </script>
 </body>
 </html>
