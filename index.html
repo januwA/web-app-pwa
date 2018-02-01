@@ -35,16 +35,6 @@
       });
     }
   </script>
-</head>
-
-<body>
-  <!--[if lt IE 8]>  <h3>请升级你的浏览器，或更换主浏览器！！!</h3>  <![endif]-->
-  hello
-  <img src="./t_48.png" alt="48x img">
-  <img src="./t_96.png" alt="96x img">
-  <img src="./t_192.png" alt="192x img">
-  <br />
-  <div id="doc">null</div>
   <script>
     window.addEventListener('beforeinstallprompt', function(e) {
       // 在安装提示之前
@@ -55,13 +45,23 @@
         console.log(choiceResult.outcome);
 
         if (choiceResult.outcome == 'dismissed') {
-          document.querySelector('doc').innerHTML = '取消安装';
+          console.log('取消安装');
         } else if(choiceResult.outcome == 'accepted'){
-        document.querySelector('doc').innerHTML = '添加到主屏幕';
+          console.log('添加到主屏幕');
         }
       });
     });
   </script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>  <h3>请升级你的浏览器，或更换主浏览器！！!</h3>  <![endif]-->
+  hello
+  <img src="./t_48.png" alt="48x img">
+  <img src="./t_96.png" alt="96x img">
+  <img src="./t_192.png" alt="192x img">
+  <br />
+  <div id="doc">null</div>
 </body>
 
 </html>
