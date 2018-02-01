@@ -1,6 +1,8 @@
 {
   "short_name": "Ajanuw",
   "name": "测试 manifest",
+  "description": "...测试测试！！描述",
+  "version": "0.1",
   "icons": [
     {
       "src": "./t_48.png",
@@ -19,7 +21,6 @@
     }
   ],
   "start_url": "./index.html",
-  "background_color": "#f48",
-  "theme_color": "#f48",
-  "display": "standalone"
+  "background_color": "#ff4488",
+  "theme_color": "#ff4488"
 }
