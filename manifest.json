@@ -1,8 +1,12 @@
 {
-  "short_name": "Ajanuw",
-  "name": "测试 manifest",
+  "short_name": "Ajanuw用于主屏幕",
+  "name": "用于横幅中。",
   "description": "...测试测试！！描述",
   "version": "0.1",
+  "background_color": "#ff4488",
+  "theme_color": "#ff4488",
+  "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "./t_48.png",
@@ -20,9 +24,5 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "./index.html",
-  "background_color": "#ff4488",
-  "theme_color": "#ff4488",
-  "display": "standalone",
-  "orientation": "portrait"
+  "start_url": "index.html"
 }

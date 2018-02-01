@@ -24,36 +24,34 @@
   <link rel="icon" sizes="192x192" href="./t_192.png">
   <link rel="apple-touch-icon" href="./t_96.png">
   <meta name="msapplication-square310x310logo" content="./t_96.png">
-  <!-- <meta name="theme-color" content="#ff4081"> -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-startup-image" href="./t_192.png">
   <link rel="manifest" href="manifest.json">
-<!-- <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").then(function(reg) {
-      console.log("register", reg);
-    }).catch(function(err) {
-      console.log("err", err);
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+  </script>
+  <script>
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.userChoice.then(function(choiceResult) {
+        console.log(choiceResult.outcome);
+        if (choiceResult.outcome == 'dismissed') {
+          console.log('User cancelled home screen install');
+        } else {
+          // 如果用户将网页添加到主屏幕
+          console.log('User added to home screen');
+        }
+      });
     });
-  }
-</script> -->
-<script>
-  window.addEventListener('beforeinstallprompt', function(e) {
-    // 在安装提示之前
-    // dismissed
-    // accepted 添加到主屏幕
-    e.userChoice.then(function(choiceResult) {
-      console.log(`cool back`);
-      console.log(choiceResult.outcome);
-
-      if (choiceResult.outcome == 'dismissed') {
-        console.log('取消安装');
-      } else if (choiceResult.outcome == 'accepted') {
-        console.log('添加到主屏幕');
-      }
-    });
-  });
-</script>
+  </script>
 </head>
 
 <body>
@@ -62,8 +60,5 @@
   <img src="./t_48.png" alt="48x img">
   <img src="./t_96.png" alt="96x img">
   <img src="./t_192.png" alt="192x img">
-  <br />
-  <div id="doc">null</div>
 </body>
-
 </html>
