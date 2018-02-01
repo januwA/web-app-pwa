@@ -1,0 +1,25 @@
+{
+  "short_name": "Ajanuw",
+  "name": "测试 manifest",
+  "icons": [
+    {
+      "src": "http://per.kelantu.com/photos/1514437475-FlTozLVMxiq8Ctx0Mbh8G5Hc6hvk-ng0?e=3153600000&token=CT86R8zZYVXDyHWEWFoMX4pz0ksOzxtKCaC80si4:0Jf5nGsPWg5WhNUgQJisyMcGiaQ=",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "http://per.kelantu.com/photos/1514437475-FlTozLVMxiq8Ctx0Mbh8G5Hc6hvk-ng0?e=3153600000&token=CT86R8zZYVXDyHWEWFoMX4pz0ksOzxtKCaC80si4:0Jf5nGsPWg5WhNUgQJisyMcGiaQ=",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "http://per.kelantu.com/photos/1514437475-FlTozLVMxiq8Ctx0Mbh8G5Hc6hvk-ng0?e=3153600000&token=CT86R8zZYVXDyHWEWFoMX4pz0ksOzxtKCaC80si4:0Jf5nGsPWg5WhNUgQJisyMcGiaQ=",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/web-app-manifest/index.html",
+  "background_color": "#f48",
+  "theme_color ": "#f48",
+  "display": "standalone"
+}
