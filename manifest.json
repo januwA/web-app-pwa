@@ -1,12 +1,25 @@
 {
-  "short_name": "Manifest",
-  "name": "Manifest",
-  "start_url": ".",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#29BDBB",
-  "background_color": "#29BDBB",
-  "related_applications": [{
-    "platform": "web"
-}]
+  "short_name": "Ajanuw",
+  "name": "测试 manifest",
+  "icons": [
+    {
+      "src": "./t_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./t_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./t_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#f48",
+  "theme_color": "#f48",
+  "display": "standalone"
 }
