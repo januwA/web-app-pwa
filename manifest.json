@@ -3,17 +3,17 @@
   "name": "测试 manifest",
   "icons": [
     {
-      "src": "t_48.png",
+      "src": "./t_48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "t_96.png",
+      "src": "./t_96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "t_192.png",
+      "src": "./t_192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
