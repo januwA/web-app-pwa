@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>  <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>  <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <title>ajanuw</title>
@@ -22,12 +25,46 @@
   <meta name="msapplication-square310x310logo" content="https://pic.cnblogs.com/avatar/1053296/20171128213246.png">
   <link rel="apple-touch-startup-image" href="https://pic.cnblogs.com/avatar/1053296/20171128213246.png">
   <link rel="manifest" href="/manifest.json">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js").then(function(reg) {
+        console.log("register", reg);
+      }).catch(function(err) {
+        console.log("err", err);
+      });
+    }
+  </script>
+  <script>
+    window.addEventListener('beforeinstallprompt', function(e) {
+      // beforeinstallprompt Event fired
+
+      // e.userChoice will return a Promise.
+      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+      e.userChoice.then(function(choiceResult) {
+
+        console.log(choiceResult.outcome);
+
+        if (choiceResult.outcome == 'dismissed') {
+          console.log('User cancelled home screen install');
+        } else {
+          console.log('User added to home screen');
+        }
+      });
+    });
+  </script>
+  <script>
+    fetch()
+  </script>
+
 </head>
+
 <body>
-   <!--[if lt IE 8]>  <h3>请升级你的浏览器，或更换主浏览器！！!</h3>  <![endif]-->
-   hello 0.0
-   <img src="./t_48.png" alt="48x img">
-   <img src="./t_96.png" alt="96x img">
-   <img src="./t_192.png" alt="192x img">
+  <!--[if lt IE 8]>  <h3>请升级你的浏览器，或更换主浏览器！！!</h3>  <![endif]-->
+  hello 0.0
+  <img src="./t_48.png" alt="48x img">
+  <img src="./t_96.png" alt="96x img">
+  <img src="./t_192.png" alt="192x img">
 </body>
+
 </html>
