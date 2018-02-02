@@ -60,5 +60,20 @@
   <img src="./t_48.png" alt="48x img">
   <img src="./t_96.png" alt="96x img">
   <img src="./t_192.png" alt="192x img">
+  <script>
+
+    function fullscreen(el) {
+      this.webkitRequestFullscreen();
+    }
+
+    function run(){
+      Array.from(document.getElementsByTagName('img'))
+      .forEach((el, index)=>{
+        el.addEventListener('click', fullscreen, false);
+      });
+    }
+
+    run();
+  </script>
 </body>
 </html>
