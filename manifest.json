@@ -5,22 +5,22 @@
   "version": "0.1",
   "icons": [
     {
-      "src": "./t_48.png",
+      "src": "https://januwa.github.io/web-app-manifest/t_48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "./t_96.png",
+      "src": "https://januwa.github.io/web-app-manifest/t_96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "./t_192.png",
+      "src": "https://januwa.github.io/web-app-manifest/t_192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "https://januwa.github.io/web-app-manifest/index.html",
   "background_color": "#ff4488",
   "theme_color": "#ff4488",
   "display": "standalone",
