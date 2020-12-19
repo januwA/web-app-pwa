@@ -4,76 +4,78 @@
 <!--[if IE 8]>  <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>ajanuw</title>
-  <link rel="shortcut icon" type="image/ico" href="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="renderer" content="webkit">
-  <meta name="keywords" content="ajanuw">
-  <meta name="description" content="ajanuw, b,c">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Window-target" content="_top">
-  <meta http-equiv="content-Type" content="text/html;charset=utf-8">
-  <meta http-equiv="Content-Language" content="zh-cn">
-  <meta http-equiv="imagetoolbar" content="false">
-  <link rel="icon" sizes="192x192" href="./t_192.png">
-  <link rel="apple-touch-icon" href="./t_96.png">
-  <meta name="msapplication-square310x310logo" content="./t_96.png">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-startup-image" href="./t_192.png">
-  <link rel="manifest" href="manifest.json">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js')
-        .then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    }
-  </script>
-  <script>
-    window.addEventListener('beforeinstallprompt', function(e) {
-      e.userChoice.then(function(choiceResult) {
-        console.log(choiceResult.outcome);
-        if (choiceResult.outcome == 'dismissed') {
-          console.log('User cancelled home screen install');
-        } else {
-          // 如果用户将网页添加到主屏幕
-          console.log('User added to home screen');
+  <!--<![endif]-->
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <title>ajanuw</title>
+      <link rel="shortcut icon" type="image/ico" href="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="renderer" content="webkit" />
+      <meta name="keywords" content="ajanuw" />
+      <meta name="description" content="PWA, Web PWA, Web App" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta http-equiv="Pragma" content="no-cache" />
+      <meta http-equiv="Window-target" content="_top" />
+      <meta http-equiv="content-Type" content="text/html;charset=utf-8" />
+      <meta http-equiv="Content-Language" content="zh-cn" />
+      <meta http-equiv="imagetoolbar" content="false" />
+      <link rel="icon" sizes="192x192" href="./t_192.png" />
+      <link rel="apple-touch-icon" href="./t_96.png" />
+      <meta name="msapplication-square310x310logo" content="./t_96.png" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
+      <link rel="apple-touch-startup-image" href="./t_192.png" />
+      <link rel="manifest" href="manifest.json" />
+      <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then(function (registration) {
+              // Registration was successful
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            })
+            .catch(function (err) {
+              // registration failed :(
+              console.log("ServiceWorker registration failed: ", err);
+            });
         }
-      });
-    });
-  </script>
-</head>
+        window.addEventListener("beforeinstallprompt", function (e) {
+          e.userChoice.then(function (choiceResult) {
+            console.log(choiceResult.outcome);
+            if (choiceResult.outcome == "dismissed") {
+              console.log("User cancelled home screen install");
+            } else {
+              // 如果用户将网页添加到主屏幕
+              console.log("User added to home screen");
+            }
+          });
+        });
+      </script>
+    </head>
 
-<body>
-  <!--[if lt IE 8]>  <h3>请升级你的浏览器，或更换主浏览器！！!</h3>  <![endif]-->
-  hello
-  <img src="./t_48.png" alt="48x img">
-  <img src="./t_96.png" alt="96x img">
-  <img src="./t_192.png" alt="192x img">
-  <script>
+    <body>
+      <!--[if lt IE 8]>
+        <h3>请升级你的浏览器，或更换主浏览器！！!</h3>
+      <![endif]-->
+      hello
+      <img src="./t_48.png" alt="48x img" />
+      <img src="./t_96.png" alt="96x img" />
+      <img src="./t_192.png" alt="192x img" />
+      <script>
+        function fullscreen(el) {
+          this.webkitRequestFullscreen();
+        }
 
-    function fullscreen(el) {
-      this.webkitRequestFullscreen();
-    }
-
-    function run(){
-      Array.from(document.getElementsByTagName('img'))
-      .forEach((el, index)=>{
-        el.addEventListener('click', fullscreen, false);
-      });
-    }
-
-    run();
-  </script>
-</body>
+        Array.from(document.getElementsByTagName("img")).forEach((el) =>
+          el.addEventListener("click", fullscreen)
+        );
+      </script>
+    </body>
+  </html>
 </html>
