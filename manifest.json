@@ -9,20 +9,20 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://januwa.github.io/web-app-manifest/t_48.png",
+      "src": "https://januwa.github.io/web-app-pwa/t_48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "https://januwa.github.io/web-app-manifest/t_96.png",
+      "src": "https://januwa.github.io/web-app-pwa/t_96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "https://januwa.github.io/web-app-manifest/t_192.png",
+      "src": "https://januwa.github.io/web-app-pwa/t_192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
-  "start_url": "/web-app-manifest/index.html"
+  "start_url": "/web-app-pwa/index.html"
 }
